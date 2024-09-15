@@ -1,0 +1,11 @@
+version: '3'
+services:
+  react-app:
+    container_name: kaur_harleen_coding_assignment11
+    build: .
+    ports:
+      - "7775:3000"  # React app runs on port 3000 by default in the container
+    volumes:
+      - .:/kaur_harleen_coding_assignment11_harleen_site
+    environment:
+      - CHOKIDAR_USEPOLLING=true  # Optional: fixes hot-reload issues in Docker
